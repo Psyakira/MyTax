@@ -4,6 +4,9 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+    <style name="Button.darkgreen" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/darkgreen</item>
+    </style>
 
     <style name="Theme.MyTax" parent="Base.Theme.MyTax" />
 </resources>

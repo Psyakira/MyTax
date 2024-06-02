@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">MyTax</string>
-    <string name="title_welcome_page">Welcome to</string>
-    <string name="message_welcome_page">“Your Tax Management Assistant”</string>
-    <string name="next">Next</string>
+    <string name="username">Username</string>
+    <string name="name">Nama Usaha</string>
+    <string name="jenisusaha">Jenis Usaha</string>
+    <string name="kategoriusaha">Kategori Usaha</string>
+    <string name="omset">Omset Per Tahun</string>
+    <string name="opsional">Opsional</string>
+    <string name="title_menu_usaha">USAHA</string>
+    <string name="add">Tambahkan</string>
+    <string name="pilih">Pilih</string>
+    <string name="ubah">Ubah</string>
 </resources>
