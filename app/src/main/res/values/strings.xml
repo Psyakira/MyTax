@@ -15,4 +15,13 @@
     <string name="title_welcome_page">Welcome to</string>
     <string name="login">Login</string>
     <string name="messagelogin">Please login first before continue.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="continueWith">Or continue with</string>
+    <string name="register">Register</string>
+    <string name="inputEmail">Input Email</string>
+    <string name="inputPassword">Input Password</string>
+    <string name="messageregister">Fill form to register new MyTax account.</string>
+    <string name="calreadyanaccoun">Already have an account?</string>
+    <string name="inputFullName">Input Full Name</string>
 </resources>

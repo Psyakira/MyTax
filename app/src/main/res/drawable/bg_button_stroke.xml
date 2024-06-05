@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                    <stroke android:width="8dp" android:color="@color/darkgreen"/>
+                    <solid android:color="#00ffffff"/>
+                    <corners android:radius="8dp"/>
+            </item>
+        </layer-list>
+    </item>
+
+    <item >
+        <layer-list>
+            <item>
+                    <stroke android:width="8dp" android:color="@color/darkgreen"/>
+                    <solid android:color="#00ffffff"/>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>
