@@ -1,4 +1,4 @@
-package com.submission.mytax.loginregister.di
+package com.submission.mytax.loginregister
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.submission.mytax.R
-import com.submission.mytax.loginregister.HomeActivity
 
 class NameActivity : AppCompatActivity() {
 
