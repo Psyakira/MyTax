@@ -13,29 +13,21 @@
         android:theme="@style/Theme.MyTax"
         tools:targetApi="31">
         <activity
-            android:name=".loginregister.LoginActivity"
-            android:exported="false" />
-        <activity
             android:name=".customview.EmailCustom"
             android:exported="false" />
         <activity
             android:name=".customview.PasswordCustom"
             android:exported="false" />
         <activity
-            android:name=".CustomView"
-            android:exported="false" />
-        <activity
-            android:name=".loginregister.SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".loginregister.RegisterActivity"
-            android:exported="false" />
-        <activity
             android:name=".loginregister.WelcomeActivity"
             android:exported="false" />
-        <activity
-            android:name=".loginregister.LoginActivity"
-            android:exported="false" />
+        <activity android:name=".loginregister.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".loginregister.MainActivity"
             android:exported="true">
