@@ -11,19 +11,5 @@ import androidx.core.view.WindowInsetsCompat
 import com.submission.mytax.R
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
 
-        Handler(Looper.getMainLooper()).postDelayed({
-            goToWelcomeActivity()
-        }, 2000L)
-    }
-
-    private fun goToWelcomeActivity() {
-        Intent(this, WelcomeActivity::class.java).also {
-            startActivity(it)
-            finish()
-        }
-    }
 }
