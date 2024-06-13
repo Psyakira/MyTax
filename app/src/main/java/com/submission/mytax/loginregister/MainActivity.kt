@@ -18,7 +18,6 @@ import com.submission.mytax.loginregister.darkmode.DarkModeActivity
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var darkmodeLayout: DarkModeActivity
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {

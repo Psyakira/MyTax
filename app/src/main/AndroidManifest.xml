@@ -13,14 +13,13 @@
         android:theme="@style/Theme.MyTax"
         tools:targetApi="31">
         <activity
-            android:name=".SplashActivity" android:theme="@style/SplashScreenStyle"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".loginregister.profileusaha.ProfileUsahaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashScreenStyle"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".customview.EmailCustom"
             android:exported="false" />
@@ -32,32 +31,39 @@
             android:exported="false" />
         <activity
             android:name=".loginregister.LoginActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".loginregister.MainActivity"
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/SplashScreenStyle">
+                <intent-filter>
+                    <action android:name="android.intent.action.MAIN" />
+
+                    <category android:name="android.intent.category.LAUNCHER" />
+                </intent-filter>
+        </activity>
         <activity
             android:name=".loginregister.NPWPActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".loginregister.KonsultasiActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".loginregister.PajakActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".loginregister.PPNActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".loginregister.PPh22Activity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".loginregister.PPh23Activity"
-            android:exported="true"/>
+            android:exported="true" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>
