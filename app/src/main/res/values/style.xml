@@ -6,7 +6,8 @@
         <item name="colorAccent">@color/white</item>
     </style>
 
-    <style name="SplashScreenStyle" parent="Theme.AppCompat.NoActionBar">
-
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/darkgreen</item>
     </style>
+
 </resources>

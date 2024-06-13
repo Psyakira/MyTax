@@ -30,6 +30,6 @@
     <string name="back_icon_description">Back</string>
     <string name="layanan">Cek NPWP dan Informasi Terbaru Melalui Website Direktorat Jenderal Pajak</string>
     <string name="pendaftaran_npwp_baru">Pendaftaran NPWP Baru Melalui Website ereg.pajak.go.id</string>
-    <string name="dark_mode">Tema Gelap</string>
+    <string name="dark_mode">Tema Gelap  </string>
 
 </resources>

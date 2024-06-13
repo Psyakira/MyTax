@@ -5,15 +5,14 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.navigation.NavigationView
+import com.submission.mytax.AddUsahaActivity
 import com.submission.mytax.R
-import com.submission.mytax.loginregister.darkmode.DarkModeActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,16 +23,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar_mytax)
         setSupportActionBar(toolbar)
-
 
         // Hide default title
         supportActionBar?.setDisplayShowTitleEnabled(false)
-
-        // Set custom title
-        val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
-        toolbarTitle.text = "MyTax"
 
         // Inisialisasi Menu
 
@@ -45,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         btnMenu4.setOnClickListener {
             startActivity(Intent(this, KonsultasiActivity::class.java))
         }
-
         val btnMenu5 = findViewById<View>(R.id.btnMenu5)
         btnMenu5.setOnClickListener {
             startActivity(Intent(this, NPWPActivity::class.java))
@@ -61,7 +54,9 @@ class MainActivity : AppCompatActivity() {
             toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
-        )
+        ).apply {
+            drawerArrowDrawable.color = resources.getColor(R.color.black) // Ganti dengan warna yang sesuai
+        }
 
         // Set ActionBarDrawerToggle sebagai listener untuk DrawerLayout
         drawerLayout.addDrawerListener(actionBarDrawerToggle)
@@ -81,11 +76,11 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_usaha -> {
                     // Handle the usaha action
+                    startActivity(Intent(this, AddUsahaActivity::class.java))
                     true
                 }
                 R.id.nav_darkmode -> {
                     // Handle the darkmode action
-                    startActivity(Intent(this, DarkModeActivity::class.java))
                     true
                 }
                 else -> false
