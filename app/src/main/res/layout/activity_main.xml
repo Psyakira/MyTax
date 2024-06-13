@@ -21,8 +21,16 @@
             android:paddingStart="16dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
+            <ImageView
+                android:id="@+id/imageViewMenuIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hamburger_menu"
+                android:contentDescription="Menu"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
             <TextView
-                android:id="@+id/toolbar_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="MyTax"
@@ -32,37 +40,6 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:padding="8dp"
-            android:background="@drawable/bg_header">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/imageViewProfile"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_profile"
-                android:contentDescription="@string/profile_image_description" />
-
-            <TextView
-                android:id="@+id/textViewUsername"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="14sp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="John Doe"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-        </LinearLayout>
-
         <!-- Menu Baris 1 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,9 +47,7 @@
             android:orientation="horizontal"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:padding="16dp">
 
             <!-- Item 1 -->
             <LinearLayout
@@ -93,10 +68,9 @@
                     android:id="@+id/tvMenu1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/roboto"
-                    android:text="Penjualan"
-                    android:textAlignment="center" />
+                    android:text="Penjualan"/>
             </LinearLayout>
 
             <!-- Item 2 -->
@@ -120,7 +94,6 @@
                     android:layout_height="wrap_content"
                     android:text="Pembelian"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/roboto"
                     android:textAlignment="center"/>
             </LinearLayout>
 
@@ -145,7 +118,6 @@
                     android:layout_height="wrap_content"
                     android:text="Pajak"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/roboto"
                     android:textAlignment="center"/>
             </LinearLayout>
 
@@ -170,80 +142,53 @@
                     android:layout_height="wrap_content"
                     android:text="Konsultasi"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/roboto"
                     android:textAlignment="center"/>
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Menu Baris 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:padding="16dp">
 
-            <!-- Item 5 -->
-            <LinearLayout
-                android:layout_width="0dp"
+            <ImageButton
+                android:id="@+id/btnMenu5"
+                android:layout_width="66dp"
+                android:layout_height="56dp"
+                android:background="@drawable/ic_konsultasi"/>
+
+            <TextView
+                android:id="@+id/tvMenu5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp">
-
-                <ImageButton
-                    android:id="@+id/btnMenu5"
-                    android:layout_width="66dp"
-                    android:layout_height="56dp"
-                    android:background="@drawable/ic_npwp"/>
-
-                <TextView
-                    android:id="@+id/tvMenu5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NPWP"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/roboto"
-                    android:textAlignment="center"/>
-            </LinearLayout>
-
-            <!-- Placeholder for aligning other items -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:padding="8dp"/>
+                android:text="Konsultasi"
+                android:layout_marginTop="8dp"
+                android:textAlignment="center"/>
         </LinearLayout>
 
     </LinearLayout>
 
+    </LinearLayout>
 
+    <!-- Side Menu -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

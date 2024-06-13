@@ -1,211 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUsahaActivity">
 
-	<ProgressBar
-		android:id="@+id/progressBar"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:visibility="gone"
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGithub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_row_usaha"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-	<TextView
-		android:id="@+id/titleTextView"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginTop="20dp"
-		android:layout_marginEnd="32dp"
-		android:alpha="0"
-		android:text="@string/title_menu_usaha"
-		android:textColor="@color/black"
-		android:textSize="20sp"
-		android:textStyle="bold"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintHorizontal_bias="0.0"
-		app:layout_constraintStart_toStartOf="parent"
-		tools:alpha="100" />
-
-	<TextView
-		android:id="@+id/tvnamausaha"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginTop="30dp"
-		android:alpha="0"
-		android:text="@string/name"
-		android:textColor="@color/black"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-		tools:alpha="100" />
-
-	<com.google.android.material.textfield.TextInputLayout
-		android:id="@+id/etnamausaha"
-		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginEnd="32dp"
-		android:alpha="0"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tvnamausaha"
-		app:errorEnabled="true"
-		tools:alpha="100">
-
-		<com.google.android.material.textfield.TextInputEditText
-			android:id="@+id/textnamausaha"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:ems="10"
-			android:inputType="text" />
-	</com.google.android.material.textfield.TextInputLayout>
-	<TextView
-		android:id="@+id/tvjenisusaha"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginTop="8dp"
-		android:alpha="0"
-		android:text="@string/jenisusaha"
-		android:textColor="@color/black"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/etnamausaha"
-		tools:alpha="100" />
-
-	<com.google.android.material.textfield.TextInputLayout
-		android:id="@+id/etjenisusaha"
-		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginEnd="32dp"
-		android:alpha="0"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tvjenisusaha"
-		app:errorEnabled="true"
-		tools:alpha="100">
-
-		<com.google.android.material.textfield.TextInputEditText
-			android:id="@+id/textjenisusaha"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:ems="10"
-			android:inputType="text" />
-	</com.google.android.material.textfield.TextInputLayout>
-	<TextView
-		android:id="@+id/tvkategoriusaha"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginTop="8dp"
-		android:alpha="0"
-		android:text="@string/kategoriusaha"
-		android:textColor="@color/black"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/etjenisusaha"
-		tools:alpha="100" />
-
-	<TextView
-		android:id="@+id/opsional"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="8dp"
-		android:layout_marginStart="5dp"
-		android:alpha="0"
-		android:text="@string/opsional"
-		app:layout_constraintStart_toEndOf="@+id/tvkategoriusaha"
-		app:layout_constraintTop_toBottomOf="@id/etjenisusaha"
-		tools:alpha= "100"/>
-
-	<com.google.android.material.textfield.TextInputLayout
-		android:id="@+id/etkategoriusaha"
-		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginEnd="32dp"
-		android:alpha="0"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tvkategoriusaha"
-		app:errorEnabled="true"
-		tools:alpha="100">
-
-		<com.google.android.material.textfield.TextInputEditText
-			android:id="@+id/textkategoriusaha"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:ems="10"
-			android:inputType="text" />
-	</com.google.android.material.textfield.TextInputLayout>
-	<TextView
-		android:id="@+id/tvomset"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginTop="8dp"
-		android:alpha="0"
-		android:text="@string/omset"
-		android:textColor="@color/black"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/etkategoriusaha"
-		tools:alpha="100" />
-
-	<TextView
-		android:id="@+id/opsional2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="8dp"
-		android:layout_marginStart="5dp"
-		android:alpha="0"
-		android:text="@string/opsional"
-		app:layout_constraintStart_toEndOf="@+id/tvomset"
-		app:layout_constraintTop_toBottomOf="@id/etkategoriusaha"
-		tools:alpha= "100"/>
-
-	<com.google.android.material.textfield.TextInputLayout
-		android:id="@+id/etomset"
-		style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-		android:layout_width="0dp"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="32dp"
-		android:layout_marginEnd="32dp"
-		android:alpha="0"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/tvomset"
-		app:errorEnabled="true"
-		tools:alpha="100">
-
-		<com.google.android.material.textfield.TextInputEditText
-			android:id="@+id/textomset"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:ems="10"
-			android:inputType="text" />
-	</com.google.android.material.textfield.TextInputLayout>
-
-	<Button
-		android:id="@+id/signupButton"
-		android:layout_width="0dp"
-		android:layout_height="64dp"
-		android:layout_marginStart="32dp"
-		android:layout_marginBottom="32dp"
-		android:layout_marginEnd="32dp"
-		android:alpha="0"
-		android:backgroundTint="@color/darkgreen"
-		android:text="@string/add"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintBottom_toBottomOf="parent"
-		tools:alpha="100" />
-
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
