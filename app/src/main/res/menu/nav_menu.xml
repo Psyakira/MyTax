@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/BtnBack"
+            android:icon="@drawable/ic_btn_back"/>
+        <item
+            android:id="@+id/nav_usaha"
+            android:title="Profil Usaha"
+            android:icon="@drawable/ic_bussiness"/>
+        <item
+            android:id="@+id/nav_darkmode"
+            android:title="Tema Gelap"
+            android:icon="@drawable/ic_darkmode"/>
+    </group>
+</menu>

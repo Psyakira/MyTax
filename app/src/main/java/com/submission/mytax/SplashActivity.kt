@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.submission.mytax.loginregister.MainActivity
 import com.submission.mytax.loginregister.WelcomeActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -16,12 +17,12 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            goToWelcomeActivity()
+            goToMainActivity()
         }, 2000L)
     }
 
-    private fun goToWelcomeActivity() {
-        Intent(this, WelcomeActivity::class.java).also {
+    private fun goToMainActivity() {
+        Intent(this, MainActivity::class.java).also {
             startActivity(it)
             finish()
         }

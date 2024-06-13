@@ -24,4 +24,8 @@
     <string name="messageregister">Fill form to register new MyTax account.</string>
     <string name="calreadyanaccoun">Already have an account?</string>
     <string name="inputFullName">Input Full Name</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="profile_image_description">Profile Image</string>
+
 </resources>
