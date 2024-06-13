@@ -33,13 +33,14 @@
         <activity
             android:name=".loginregister.LoginActivity"
             android:exported="false"/>
-
         <activity
             android:name=".loginregister.MainActivity"
             android:exported="true"/>
-
         <activity
             android:name=".loginregister.NPWPActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".loginregister.KonsultasiActivity"
             android:exported="true"/>
 
         <meta-data
