@@ -20,7 +20,7 @@ class NameActivity : AppCompatActivity() {
             if (name.isNotEmpty()) {
                 saveUserName(name)
                 // Arahkan ke halaman home setelah pengisian nama
-                Intent(this, HomeActivity::class.java).also {
+                Intent(this, MainActivity::class.java).also {
                     startActivity(it)
                     finish()
                 }

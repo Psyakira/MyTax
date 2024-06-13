@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
         toolbarTitle.text = "MyTax"
 
         // Inisialisasi Menu
+
+        val btnMenu3 = findViewById<View>(R.id.btnMenu3)
+        btnMenu3.setOnClickListener {
+            startActivity(Intent(this, PajakActivity::class.java))
+        }
         val btnMenu4 = findViewById<View>(R.id.btnMenu4)
         btnMenu4.setOnClickListener {
             startActivity(Intent(this, KonsultasiActivity::class.java))

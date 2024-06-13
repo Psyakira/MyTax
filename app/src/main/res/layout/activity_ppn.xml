@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_ppn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PPN"
+            android:fontFamily="@font/eudoxusbold"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar_ppn"
+        android:layout_margin="24dp">
+
+        <!-- Judul 1 -->
+        <TextView
+            android:id="@+id/text_judul_ppnkeluaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total PPN Keluaran"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_gravity="start"/>
+
+        <!-- Deskripsi 1 -->
+        <TextView
+            android:id="@+id/text_ppn_keluaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/bg_text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Judul 2 -->
+        <TextView
+            android:id="@+id/text_judul_ppnmasukan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total PPN Masukan"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_gravity="start"/>
+
+        <!-- Deskripsi 2 -->
+        <TextView
+            android:id="@+id/text_ppn_masukan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/bg_text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Judul 3 -->
+        <TextView
+            android:id="@+id/text_judul_ppnterhutang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total PPN Terhutang"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/roboto"
+            android:layout_gravity="start"/>
+
+        <!-- Deskripsi 3 -->
+        <TextView
+            android:id="@+id/text_ppn_terhutang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rp 0"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/bg_text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
