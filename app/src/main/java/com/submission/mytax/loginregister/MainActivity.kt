@@ -5,7 +5,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,10 +13,12 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.navigation.NavigationView
 import com.submission.mytax.R
+import com.submission.mytax.loginregister.darkmode.DarkModeActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var darkmodeLayout: DarkModeActivity
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -85,6 +86,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_darkmode -> {
                     // Handle the darkmode action
+                    startActivity(Intent(this, DarkModeActivity::class.java))
                     true
                 }
                 else -> false
