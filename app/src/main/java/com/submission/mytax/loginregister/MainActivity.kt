@@ -1,8 +1,10 @@
 package com.submission.mytax.loginregister
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -32,6 +34,12 @@ class MainActivity : AppCompatActivity() {
         // Set custom title
         val toolbarTitle: TextView = findViewById(R.id.toolbar_title)
         toolbarTitle.text = "MyTax"
+
+        // Inisialisasi Menu
+        val btnMenu5 = findViewById<View>(R.id.btnMenu5)
+        btnMenu5.setOnClickListener {
+            startActivity(Intent(this, NPWPActivity::class.java))
+        }
 
         // Inisialisasi DrawerLayout
         drawerLayout = findViewById(R.id.drawerLayout)
