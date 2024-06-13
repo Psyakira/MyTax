@@ -3,6 +3,7 @@ package com.submission.mytax.loginregister
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,16 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        // Find the TextView for "Login as Guest"
+        val tvLoginGuest: TextView = findViewById(R.id.tvLoginGuest)
+
+        // Set OnClickListener on the "Login as Guest" TextView
+        tvLoginGuest.setOnClickListener {
+            // Create an intent to start the target activity
+            val intent = Intent(this, NameActivity::class.java)
+            startActivity(intent)
+        }
+
         // Konfigurasi Google Sign-In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestEmail()
@@ -35,6 +46,7 @@ class LoginActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnGoogleSignIn).setOnClickListener {
             signIn()
         }
+
     }
 
     private fun signIn() {

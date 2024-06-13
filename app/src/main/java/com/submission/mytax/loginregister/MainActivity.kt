@@ -5,6 +5,7 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -23,6 +24,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Ambil nama dari SharedPreferences
+        val sharedPreferences = getSharedPreferences("MyTaxPrefs", MODE_PRIVATE)
+        val username =
+            sharedPreferences.getString("USERNAME", "John Doe") // Default value adalah "John Doe"
+
+        // Menampilkan nama di TextView
+        val textViewName = findViewById<TextView>(R.id.textViewUsername)
+        textViewName.text = username
+
+        // Setup Toolbar
         val toolbar: Toolbar = findViewById(R.id.toolbar_mytax)
         setSupportActionBar(toolbar)
 
@@ -30,19 +41,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // Inisialisasi Menu
-
         val btnMenu3 = findViewById<View>(R.id.btnMenu3)
         btnMenu3.setOnClickListener {
             startActivity(Intent(this, PajakActivity::class.java))
         }
-        val btnMenu4 = findViewById<View>(R.id.btnMenu4)
-        btnMenu4.setOnClickListener {
-            startActivity(Intent(this, KonsultasiActivity::class.java))
-        }
-        val btnMenu5 = findViewById<View>(R.id.btnMenu5)
-        btnMenu5.setOnClickListener {
-            startActivity(Intent(this, NPWPActivity::class.java))
-        }
+        // ... tambahkan OnClickListener untuk menu lainnya
 
         // Inisialisasi DrawerLayout
         drawerLayout = findViewById(R.id.drawerLayout)
@@ -55,7 +58,8 @@ class MainActivity : AppCompatActivity() {
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         ).apply {
-            drawerArrowDrawable.color = resources.getColor(R.color.black) // Ganti dengan warna yang sesuai
+            drawerArrowDrawable.color =
+                resources.getColor(R.color.black) // Sesuaikan dengan warna yang diinginkan
         }
 
         // Set ActionBarDrawerToggle sebagai listener untuk DrawerLayout
@@ -74,15 +78,18 @@ class MainActivity : AppCompatActivity() {
                     drawerLayout.closeDrawer(GravityCompat.START)
                     true
                 }
+
                 R.id.nav_usaha -> {
                     // Handle the usaha action
                     startActivity(Intent(this, AddUsahaActivity::class.java))
                     true
                 }
+
                 R.id.nav_darkmode -> {
                     // Handle the darkmode action
                     true
                 }
+
                 else -> false
             }
         }
@@ -93,9 +100,14 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
         actionBarDrawerToggle.onConfigurationChanged(newConfig)
+    }
+
+    override fun onBackPressed() {
+        // Menutup aplikasi ketika tombol kembali ditekan
+        super.onBackPressed()
+        finishAffinity() // Menutup semua aktivitas di stack dan aplikasi
     }
 }
