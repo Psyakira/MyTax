@@ -33,39 +33,48 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:padding="8dp"
-        android:background="@drawable/bg_header">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageViewProfile"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_profile"
-            android:contentDescription="@string/profile_image_description" />
-
-        <TextView
-            android:id="@+id/textViewUsername"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/userCardView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginStart="14sp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="John Doe"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/userSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="@drawable/bg_header">
 
-    <!-- Menu Baris 1 -->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_profile_image"
+                    android:contentDescription="@string/profile_image_description" />
+
+                <TextView
+                    android:id="@+id/textViewUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="14sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="John Doe"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Menu Baris 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

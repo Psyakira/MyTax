@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.submission.mytax.loginregister.MainActivity
 import com.submission.mytax.loginregister.WelcomeActivity
+import com.submission.mytax.loginregister.data.db.UserDatabase
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
@@ -38,5 +39,19 @@ class SplashActivity : AppCompatActivity() {
             startActivity(it)
             finish()
         }
+    }
+
+    private fun goToNextActivity() {
+        val userDatabase = UserDatabase.getInstance(this)
+        val user = userDatabase.userDao().getUser()
+
+        if (user != null) {
+            // Jika data pengguna sudah ada, langsung ke MainActivity
+            startActivity(Intent(this, MainActivity::class.java))
+        } else {
+            // Jika data pengguna belum ada, ke WelcomeActivity
+            startActivity(Intent(this, WelcomeActivity::class.java))
+        }
+        finish()
     }
 }

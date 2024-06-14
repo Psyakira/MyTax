@@ -10,4 +10,5 @@
         <item name="android:windowBackground">@color/darkgreen</item>
     </style>
 
+
 </resources>

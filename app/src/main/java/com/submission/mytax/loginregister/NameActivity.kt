@@ -29,23 +29,23 @@ class NameActivity : AppCompatActivity() {
             onBackPressed()
         }
 
+        // Inisialisasi SharedPreferences untuk menyimpan nama pengguna
+        sharedPreferences = getSharedPreferences("MyTaxPrefs", Context.MODE_PRIVATE)
+
         val editTextName = findViewById<EditText>(R.id.editTextName)
         val btnSubmitName = findViewById<Button>(R.id.btnSubmitName)
-
-        // Inisialisasi SharedPreferences
-        sharedPreferences = getSharedPreferences("MyTaxPrefs", Context.MODE_PRIVATE)
 
         btnSubmitName.setOnClickListener {
             val name = editTextName.text.toString().trim()
 
             if (name.isNotEmpty()) {
-                saveUserName(name) // Simpan nama ke SharedPreferences
-                val intent = Intent(this, MainActivity::class.java)
-                intent.putExtra("NAME", name)
-                startActivity(intent)
-                finish()
+                // Simpan nama pengguna ke SharedPreferences
+                saveUserName(name)
+
+                // Lanjutkan ke MainActivity atau halaman selanjutnya setelah login
+                loginUser(name)
             } else {
-                editTextName.error = "Please enter your name"
+                editTextName.error = "Silakan masukkan nama Anda"
             }
         }
     }
@@ -54,5 +54,16 @@ class NameActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putString("USERNAME", name)
         editor.apply()
+    }
+
+    private fun loginUser(username: String) {
+        // Simpan nama pengguna ke SharedPreferences
+        saveUserName(username)
+
+        // Lanjutkan ke MainActivity atau halaman selanjutnya setelah login
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("NAME", username)
+        startActivity(intent)
+        finish() // Tutup activity saat ini agar tidak dapat kembali dengan tombol back
     }
 }
