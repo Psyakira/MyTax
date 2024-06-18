@@ -16,6 +16,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.submission.mytax.AddUsahaActivity
+import com.submission.mytax.PembelianActivity
+import com.submission.mytax.PenjualanActivity
 import com.submission.mytax.ProfileActivity
 import com.submission.mytax.R
 
@@ -48,6 +50,16 @@ class MainActivity : AppCompatActivity() {
         val userSection = findViewById<View>(R.id.userSection)
         userSection.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+        val btnMenu1 = findViewById<View>(R.id.btnMenu1)
+        btnMenu1.setOnClickListener {
+            startActivity(Intent(this, PenjualanActivity::class.java))
+        }
+
+        val btnMenu2 = findViewById<View>(R.id.btnMenu2)
+        btnMenu2.setOnClickListener {
+            startActivity(Intent(this, PembelianActivity::class.java))
         }
 
         val btnMenu3 = findViewById<View>(R.id.btnMenu3)

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/bg_text"
+    android:padding="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_arrow_pembelian"
+        android:contentDescription="Arrow" />
+
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Nama"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/icon"
+        android:layout_marginStart="8dp"
+        android:text="Tanggal"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@id/tvNama"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="Icon Delete"/>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/ivDelete"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textEnd"
+        android:text="Rp 0"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:maxLength="10"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

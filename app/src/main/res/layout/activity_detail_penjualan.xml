@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_detailpenjualan"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:paddingStart="16dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Penjualan"
+                android:fontFamily="@font/eudoxusbold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Pembeli"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvNamaPembeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Nama Lengkap"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvNPWP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NPWP Pembeli"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvNPWPpembeli"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="NPWP"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvFakturlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No. Faktur"
+                android:fontFamily="@font/roboto"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvFaktur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="No. Faktur"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvTanggallabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tangal Penjualan"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvTanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:inputType="date"
+                android:hint="Pilih Tanggal"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroupType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbDalamNegeri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dalam Negeri"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbLuarNegeri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Luar Negeri" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTotallabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Penjualan"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Rp. 0"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+
+
+            <RadioGroup
+                android:id="@+id/radioGroupPPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbPPN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga termasuk PPN"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="16sp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbNoPPN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Harga tidak termasuk PPN"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvPPNKeluaranlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PPN Keluaran % (Jika PPN)"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/roboto"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvPPNKeluaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvDPPlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DPP"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:fontFamily="@font/roboto"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvDPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Rp. 0"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvPPNlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PPN"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="16dp"
+                android:paddingStart="24dp"
+                android:fontFamily="@font/roboto"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:id="@+id/tvPPN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="Rp. 0"
+                android:maxLines="1"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simpan"
+                android:layout_margin="24dp"
+                android:backgroundTint="@color/darkgreen"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

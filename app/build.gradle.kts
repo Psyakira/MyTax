@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-parcelize")
+
 }
 
 android {
@@ -52,6 +54,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.google.services.auth)
+
+    implementation ("com.google.code.gson:gson:2.8.8")
 
     implementation("de.hdodenhof:circleimageview:3.1.0")
 

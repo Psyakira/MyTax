@@ -77,6 +77,24 @@
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
+        <activity
+            android:name=".PenjualanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPenjualanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPenjualanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PembelianActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPembelianActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailPembelianActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

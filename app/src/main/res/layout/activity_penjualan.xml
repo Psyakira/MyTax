@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PenjualanActivity">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_penjualan"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:elevation="4dp"
+                android:paddingStart="16dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penjualan"
+                    android:fontFamily="@font/eudoxusbold"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_header_darkgreen"
+            android:layout_margin="24dp"
+            android:padding="16dp"
+            android:layout_below="@id/toolbar_penjualan">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvNamaToko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Makmur Jaya"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_edit"
+                    android:contentDescription="Edit"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tvDeskripsiToko"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alat Elektronik"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:layout_below="@id/tvNamaToko"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="4dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPenjualan"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/layout"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_above="@id/fab"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/darkgreen"
+        app:tint="@color/white"
+        android:contentDescription="Add"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
